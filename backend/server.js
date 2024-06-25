@@ -10,6 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Conexão com o banco de dados MongoDB
 mongoose.connect(process.env.MONGO_URI, {
 }).then(() => {
   console.log('Conectado ao MongoDB');
@@ -20,6 +21,9 @@ mongoose.connect(process.env.MONGO_URI, {
 app.get('/', (req, res) => {
   res.send('API rodando...');
 });
+
+// Rotas da API
+app.use('/api/products', productRoutes);
 
 const port = process.env.PORT || 5000;
 
