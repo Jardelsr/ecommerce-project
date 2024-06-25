@@ -1,5 +1,5 @@
 # Use a imagem oficial do Node.js como base
-FROM node:16-alpine
+FROM node:18
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /usr/src/app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para iniciar a aplicação
-CMD ["npm", "run"]
+CMD ["npm", "run", "dev"]
