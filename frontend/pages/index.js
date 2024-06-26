@@ -15,7 +15,7 @@ export default function Home() {
     }
     fetchProducts();
   }, []);
-  console.log('Produtos:', products); // Imprime os produtos para debug
+
   return (
     <div>
       <h1>Products</h1>
@@ -32,6 +32,9 @@ export default function Home() {
           <li>Nenhum produto encontrado</li>
         )}
       </ul>
+      <a href={"/products/new"}>
+        Novo Produto
+      </a>
     </div>
   );
 }
