@@ -25,6 +25,7 @@ export default function ProductDetails() {
       <img src={product.image} alt={product.name} />
       <p>{product.description}</p>
       <p>${product.price}</p>
+      <button onClick={() => router.back()}>Voltar</button>
     </div>
   );
 }
