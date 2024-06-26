@@ -67,6 +67,7 @@ const ProductForm = ({ product }) => {
           </select>
         </label>
         <button type="submit">{product ? 'Salvar Alterações' : 'Adicionar Produto'}</button>
+        <button onClick={() => router.push('/')}>Voltar</button>
       </form>
     </div>
   );

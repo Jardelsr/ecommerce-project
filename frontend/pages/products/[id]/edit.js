@@ -77,6 +77,14 @@ const EditProduct = () => {
             required
           />
         </div>
+        <div>
+        <label>Categoria:</label>
+        <select name="category" value={product.category} onChange={handleChange} required>
+            <option value="categoria1">Categoria 1</option>
+            <option value="categoria2">Categoria 2</option>
+            <option value="categoria3">Categoria 3</option>
+          </select>
+        </div>
         <button type="submit">Save Changes</button>
       </form>
     </div>

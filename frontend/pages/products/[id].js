@@ -44,7 +44,7 @@ export default function ProductDetails() {
       <p>${product.price}</p>
       <button onClick={handleEdit}>Editar</button>
       <button onClick={handleDelete}>Excluir</button>
-      <button onClick={() => router.back()}>Voltar</button>
+      <button onClick={() => router.push('/')}>Voltar</button>
     </div>
   );
 }
