@@ -55,10 +55,25 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+const { getSignedUrl } = require('../services/s3Service');
+
+const getImageUrl = (req, res) => {
+  const key = process.env.AWS_IMAGE_KEY;
+  const bucketName = process.env.AWS_BUCKET_NAME;
+
+  try {
+    const url = getSignedUrl(bucketName, key);
+    res.json({ url });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao pegar a URL da imagem', error });
+  }
+};
+
 module.exports = {
   getAllProducts,
+  getImageUrl,
   createProduct,
   getProductById,
   updateProduct,
-  deleteProduct,
+  deleteProduct
 };

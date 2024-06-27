@@ -6,6 +6,7 @@ export default function ProductDetails() {
   const router = useRouter();
   const { id } = router.query;
   const [product, setProduct] = useState(null);
+  const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
     if (id) {
@@ -19,6 +20,15 @@ export default function ProductDetails() {
       }
       fetchProduct();
     }
+    const fetchImageUrl = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/api/products/image-url/`);
+        setImageUrl(response.data.url);
+      } catch (error) {
+        console.error('Error fetching image URL:', error);
+      }
+    };
+    fetchImageUrl();
   }, [id]);
 
   const handleEdit = () => {
@@ -39,7 +49,7 @@ export default function ProductDetails() {
   return (
     <div>
       <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} />
+      <img src={imageUrl} alt={product.name} />
       <p>{product.description}</p>
       <p>${product.price}</p>
       <button onClick={handleEdit}>Editar</button>
