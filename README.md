@@ -106,7 +106,7 @@ O maior desafio que enfrentei, sem sombra de dúvidas, foi lidar com o pouco tem
 Desenvolvi o projeto fazendo uma estruturação do código em camadas (models, controllers, routes), utilizando MVC como design pattern e focando em utilizar clean code. Também usei git como versionador de código, com branches para desenvolvimento das funcionalidades.
 
 ## Como era o processo de gestão do código? (utilizou algum versionador?, tem aprovação do que está subindo?)
-Utilizei o git e como fui o único desenvolvedor, eu mesmo aprovava o que subia
+Utilizei o git e como fui o único desenvolvedor, eu mesmo aprovei o que subia
 
 ## Foram feitos testes automatizados?
 Não devido ao pouco tempo que tive. Fiz testes manuais durante o desenvolvimento.
