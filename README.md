@@ -94,3 +94,28 @@ DELETE http://localhost:5000/api/cart//:id // remove produto do carrinho de comp
 - Processamento de pedidos
 - Migração para popular o banco de dados
 - Separar o projeto e diferenciar o painel admnistrativo para gerenciar os produtos das paginas de compra e exibição de produtos
+
+#  Respondendo as perguntas do O que gostaríamos de ver em seu projeto?
+## Qual a sua participação neste projeto?
+Minha participação neste projeto envolveu o planejamento, arquitetura e implementação tanto do frontend quanto do backend. Eu projetei a estrutura da aplicação, implementei funcionalidades principais como o carrinho de compras, integração com MongoDB, e configuração de serviços AWS. Basicamente fiz o projeto todo sozinho.
+
+## Qual seu maior desaﬁo dentro do projeto? (Trazer exemplos do que foi codiﬁcado)
+O maior desafio que enfrentei, sem sombra de dúvidas, foi lidar com o pouco tempo de projeto e lidar com o frontend em next.js, pois não estou acostumado a desenvolver pro frontend. Mas como o projeto é simples, consegui superar esse dificuldade.
+
+## Qual era o processo de desenvolvimento? (estrutura, boa prática, design patterns, clean code)
+Desenvolvi o projeto fazendo uma estruturação do código em camadas (models, controllers, routes), utilizando MVC como design pattern e focando em utilizar clean code. Também usei git como versionador de código, com branches para desenvolvimento das funcionalidades.
+
+## Como era o processo de gestão do código? (utilizou algum versionador?, tem aprovação do que está subindo?)
+Utilizei o git e como fui o único desenvolvedor, eu mesmo aprovava o que subia
+
+## Foram feitos testes automatizados?
+Não devido ao pouco tempo que tive. Fiz testes manuais durante o desenvolvimento.
+
+## Tem integração com outras aplicações?
+Sim, faz integração com a S3 da AWS
+
+## Qual a arquitetura da aplicação? (micro serviço, monolito, nuvem, on premisse...)
+A arquitetura da aplicação foi baseada em uma abordagem monolítica, onde o frontend e o backend são componentes integrados em uma única aplicação
+
+## Além dos desaﬁos do projeto, quais outras tecnologias, processos e frameworks você tem domínio?
+Além das tecnologias usadas no projeto, tenho domínio na linguagem PHP e seus frameworks (Symfony, Sonata, CodeIgniter), python, java, javascript e MySQL 
