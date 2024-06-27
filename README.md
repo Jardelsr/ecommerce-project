@@ -17,7 +17,7 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
 ## Arquitetura da Aplicação
 
 [Usuário] --> [Next.js App] --> [API Gateway] --> [Node.js API] --> [MongoDB]
-                                                       |
+                                                       I
                                                        V
                                                  [AWS Services]
                                    
