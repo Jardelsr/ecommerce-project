@@ -95,7 +95,7 @@ DELETE http://localhost:5000/api/cart//:id // remove produto do carrinho de comp
 - Migração para popular o banco de dados
 - Separar o projeto e diferenciar o painel admnistrativo para gerenciar os produtos das paginas de compra e exibição de produtos
 
-#  Respondendo as perguntas do O que gostaríamos de ver em seu projeto?
+#  Respondendo as perguntas do *O que gostaríamos de ver em seu projeto?* do case técnico:
 ## Qual a sua participação neste projeto?
 Minha participação neste projeto envolveu o planejamento, arquitetura e implementação tanto do frontend quanto do backend. Eu projetei a estrutura da aplicação, implementei funcionalidades principais como o carrinho de compras, integração com MongoDB, e configuração de serviços AWS. Basicamente fiz o projeto todo sozinho.
 
