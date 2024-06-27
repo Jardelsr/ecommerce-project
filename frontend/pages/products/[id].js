@@ -38,9 +38,21 @@ export default function ProductDetails() {
   const handleDelete = async () => {
     try {
       await axios.delete(`http://localhost:5000/api/products/${id}`);
-      router.push('/'); 
+      router.push('/');
     } catch (error) {
       console.error('Error deleting product:', error);
+    }
+  };
+
+  const handleAddToCart = async () => {
+    try {
+      await axios.post('http://localhost:5000/api/cart/add', {
+        productId: id,
+        quantity: 1,
+        price: product.price
+      });
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
     }
   };
 
@@ -51,9 +63,10 @@ export default function ProductDetails() {
       <h1>{product.name}</h1>
       <img src={imageUrl} alt={product.name} />
       <p>{product.description}</p>
-      <p>${product.price}</p>
+      <p>R${product.price}</p>
       <button onClick={handleEdit}>Editar</button>
       <button onClick={handleDelete}>Excluir</button>
+      <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
       <button onClick={() => router.push('/')}>Voltar</button>
     </div>
   );

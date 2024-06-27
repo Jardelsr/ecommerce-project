@@ -7,10 +7,7 @@ export default function Navbar() {
         Home
       </Link>
       <Link href="/cart">
-        Cart
-      </Link>
-      <Link href="/login">
-        Login
+        Carrinho de compras
       </Link>
     </nav>
   );

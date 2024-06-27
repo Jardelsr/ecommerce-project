@@ -33,7 +33,7 @@ const removeCartItens = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const removedItem = await CartItem.findByIdAndRemove(id);
+        const removedItem = await CartItem.findByIdAndDelete(id);
 
         if (!removedItem) {
             return res.status(404).json({ message: 'Item não encontrado' });
