@@ -6,16 +6,6 @@ Este é um projeto simples de e-commerce que permite aos usuários cadastrarem p
 
 Consta no projeto apenas o que consegui implementar nesses últimos dias, pois foi um projeto que criei do zero para o teste da seleção da vaga.
 
-## Funcionalidades que eu implementaria se houvesse mais tempo
-
-- Registro de usuários para login
-- Autenticação JWT e Autorização dos usuários
-- Listagem de produtos com paginação e filtros
-- Checkout de pagamentos, fazendo integração com Stripe
-- Processamento de pedidos
-- Migração para popular o banco de dados
-- Separar o projeto e diferenciar o painel admnistrativo para gerenciar os produtos das paginas de compra e exibição de produtos
-
 ## Tecnologias Utilizadas
 
 - Node.js
@@ -34,12 +24,12 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
                                                  [AWS Services]
                                    
 ### Explicação do Fluxo
-Usuário: Interage com a aplicação através do frontend desenvolvido com Next.js, navegando pelos produtos, adicionando itens ao carrinho e finalizando compras.
-Next.js App: Renderiza as interfaces de usuário e consome a API RESTful do backend para obter dados e realizar operações.
-API Gateway: Gerencia o tráfego de entrada para a API do backend.
-Node.js API: Implementa lógica de negócios, processa requisições HTTP, realiza operações no banco de dados MongoDB e interage com serviços AWS conforme necessário.
-MongoDB: Armazena dados persistentes da aplicação, incluindo produtos, usuários, pedidos e itens do carrinho.
-AWS Services: Oferece suporte para armazenamento de imagens, execução de funções serverless, CDN para distribuição de conteúdo estático e outros serviços de infraestrutura.
+*Usuário:* Interage com a aplicação através do frontend desenvolvido com Next.js, navegando pelos produtos e adicionando itens ao carrinho.
+*Next.js App:* Renderiza as interfaces de usuário e consome a API RESTful do backend para obter dados e realizar operações.
+*API Gateway:* Gerencia o tráfego de entrada para a API do backend.
+*Node.js API:* Implementa lógica de negócios, processa requisições HTTP, realiza operações no banco de dados MongoDB e interage com serviços AWS conforme necessário.
+*MongoDB:* Armazena dados persistentes da aplicação de produtos e itens do carrinho.
+*AWS Services:* Oferece suporte para armazenamento da imagem usada no produto.
 
 ## Instalação
 
@@ -56,12 +46,10 @@ AWS Services: Oferece suporte para armazenamento de imagens, execução de funç
     cd ecommerce-project
     ```
 
- Monte as imagens Docker e as inicie para rodas o programa
+2. Monte as imagens Docker e as inicie para rodas o programa
 
-    ```bash
     docker-compose up --build
-    ```
-    ### Frontend
+
 
 3. Acesse `http://localhost:3000` para ver a aplicação em execução.
 
@@ -91,3 +79,13 @@ Body:
 
 DELETE http://localhost:5000/api/cart//:id // remove produto do carrinho de compras
 ```
+
+## Funcionalidades que eu implementaria se houvesse mais tempo
+
+- Registro de usuários para login
+- Autenticação JWT e Autorização dos usuários
+- Listagem de produtos com paginação e filtros
+- Checkout de pagamentos, fazendo integração com Stripe
+- Processamento de pedidos
+- Migração para popular o banco de dados
+- Separar o projeto e diferenciar o painel admnistrativo para gerenciar os produtos das paginas de compra e exibição de produtos
