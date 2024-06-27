@@ -15,12 +15,12 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
 - AWS S3
 
 ## Arquitetura da Aplicação
-
+```bash
 [Usuário] --> [Next.js App] --> [API Gateway] --> [Node.js API] --> [MongoDB]
                                                        I
                                                        V
                                                  [AWS Services]
-                                   
+```                                   
 ### Explicação do Fluxo
 *Usuário:* Interage com a aplicação através do frontend desenvolvido com Next.js, navegando pelos produtos e adicionando itens ao carrinho.
 
