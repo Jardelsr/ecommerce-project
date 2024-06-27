@@ -9,10 +9,8 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
 ## Tecnologias Utilizadas
 
 - Node.js
-- Express
 - MongoDB
 - Next.js
-- Axios
 - Docker
 - AWS S3
 
@@ -25,10 +23,15 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
                                    
 ### Explicação do Fluxo
 *Usuário:* Interage com a aplicação através do frontend desenvolvido com Next.js, navegando pelos produtos e adicionando itens ao carrinho.
+
 *Next.js App:* Renderiza as interfaces de usuário e consome a API RESTful do backend para obter dados e realizar operações.
+
 *API Gateway:* Gerencia o tráfego de entrada para a API do backend.
+
 *Node.js API:* Implementa lógica de negócios, processa requisições HTTP, realiza operações no banco de dados MongoDB e interage com serviços AWS conforme necessário.
+
 *MongoDB:* Armazena dados persistentes da aplicação de produtos e itens do carrinho.
+
 *AWS Services:* Oferece suporte para armazenamento da imagem usada no produto.
 
 ## Instalação
@@ -36,6 +39,8 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
 ### Pré-requisitos
 
 - Docker
+
+É preciso ter o Docker instalado e executando em sua máquina.
 
 ### Passos para Instalação
 
@@ -48,8 +53,9 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
 
 2. Monte as imagens Docker e as inicie para rodas o programa
 
+    ```bash
     docker-compose up --build
-
+    ```
 
 3. Acesse `http://localhost:3000` para ver a aplicação em execução.
 
@@ -57,26 +63,25 @@ Consta no projeto apenas o que consegui implementar nesses últimos dias, pois f
 ```http
 GET http://localhost:5000/api/products/ // retorna lista de produtos
 POST http://localhost:5000/api/products/ // adiciona um produto no banco
-Body:
-{
-    "name": "Nome do produto",
-    "description": "Descrição do produto",
-    "price": 00.00,
-    "category": "Categoria"
-}
+    Body:
+    {
+        "name": "Nome do produto",
+        "description": "Descrição do produto",
+        "price": 00.00,
+        "category": "Categoria"
+    }
 GET http://localhost:5000/api/image-url/ // retorna url de imagem na s3
 GET http://localhost:5000/api/products/:id // retorna produto pelo id
 DELETE http://localhost:5000/api/products/:id // exclui produto pelo id
 PUT http://localhost:5000/api/products/:id // edita um produto pelo id
 GET http://localhost:5000/api/cart/ // retorna os produtos no carrinho de compras
 POST http://localhost:5000/api/cart/add // adiciona produto no carrinho de compras
-Body:
-{
-  "productId": "667da5b6757d899bfed90251",  // ID válido de um produto no MongoDB (como string)
-  "quantity": 2,                            // Quantidade do produto a adicionar
-  "price": 29.99                            // Preço do produto
-}
-
+    Body:
+    {
+    "productId": "667da5b6757d899bfed90251",  // ID válido de um produto no MongoDB (como string)
+    "quantity": 2,                            // Quantidade do produto a adicionar
+    "price": 29.99                            // Preço do produto
+    }
 DELETE http://localhost:5000/api/cart//:id // remove produto do carrinho de compras
 ```
 
